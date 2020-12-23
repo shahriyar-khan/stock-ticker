@@ -5,8 +5,8 @@ import re
 
 def run(api_key, flag, choice):
     if choice.upper() == "RT":
+        print("[Real Time Stock Price]")
         while flag:
-            print("[Real Time Stock Price]")
             ticker = input("Please enter ticker: ")
             url = "https://financialmodelingprep.com/api/v3/quote-short/{}?apikey={}".\
                 format(ticker, api_key)
@@ -17,8 +17,8 @@ def run(api_key, flag, choice):
                 flag = False
             print()
     elif choice.upper() == 'HP':
+        print("[Historical Stock Price]")
         while flag:
-            print("[Historical Stock Price]")
             ticker = input("Please enter ticker: ")
             start_date = input("Enter start date (format: yyyy-mm-dd): ")
             end_date = input("Enter end date (format: yyyy-mm-dd): ")
